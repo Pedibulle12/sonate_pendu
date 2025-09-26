@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}Jouer | Jeu du pendu{% endblock %}
+
+{% block content %}
+{{nom_joueur}}
+{%for lettre in "abcdefghijklmnopqrstuvwxyz"%}
+<form method="POST">
+    <input name="lettre" value="{{lettre}}" type="hidden">
+    <button type="submit">{{lettre}}</button>
+</form>
+
+
+{{lettre}}
+
+{%endfor%}
+
+{% endblock %}
